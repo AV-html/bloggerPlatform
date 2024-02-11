@@ -19,10 +19,10 @@ export const inputValidation = (req: Request, res: Response, next: NextFunction)
   })
 
   if (!formattedError.isEmpty()) {
-    const errorMessage = formattedError.array({ onlyFirstError: true })
+    const errorsMessages = formattedError.array({ onlyFirstError: true })
 
     const errors = {
-      errorMessage: errorMessage
+      errorsMessages
     }
 
     res.status(400).send(errors)
