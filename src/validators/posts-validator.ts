@@ -24,7 +24,7 @@ const contentValidation =
     .withMessage("Incorrect content!")
 
 const blogIdValidation =
-  body('content')
+  body('blogId')
     .isString()
     .trim()
     .custom((value) => {
