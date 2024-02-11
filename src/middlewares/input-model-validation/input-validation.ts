@@ -19,7 +19,8 @@ export const inputValidation = (req: Request, res: Response, next: NextFunction)
   })
 
   if (!formattedError.isEmpty()) {
-    const errorMessage = formattedError.array({ onlyFirstError: true })
+    // const errorMessage = formattedError.array({ onlyFirstError: true })
+    const errorMessage = formattedError.array()
 
     const errors = {
       errorMessage: errorMessage
